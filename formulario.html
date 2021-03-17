@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	  <title>Registro estudiantes</title>
+	 
+	<link rel="stylesheet" href="css/formulario.css">
+	
+	<title>Registro</title>
+
+</head>
+
+<body class="fondo">
+<header>
+		
+	
+</header>
+	
+	<main class="main">
+		<div class="container">
+		<section>
+		<form id="frmajax" action="registrar_estudiante.php" method="post" 
+		class="form-register" onsubmit="return validar();">
+		<h3>Registro estudiantes!</h3>
+			<input class="controls" type="text" name="nombre"  placeholder="&#128100; Nombre" required>
+			<input class="controls" type="text" name="apellido" placeholder="&#128737; Apellido" required>
+			<input class="controls" type="number" id="cedula_validar" name="cedula" placeholder="&#127380; Identificación" onBlur="validar_cedula()" required>
+			<input class="controls" type="text" name="direccion" placeholder="&#8608; Dirección" required>
+			<input class="controls" type="email" name="correo" placeholder="&#9993; Correo" required>
+			<input class="controls" type="number" name="telefono" placeholder="&#128222; Telefono" required>
+			<div id="cedulasiexiste"></div>
+			<div id="mostrarboton" class="btn_form" style="display: none;">
+				<button id="btnguardar" class="botons" >Registrar</button>
+			</div>
+				
+		</form>
+
+			</section>
+		</div>
+		
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="jq/jquery-3.5.1.min.js"></script>
+
+  <script type="text/javascript" src="js/validar_cedula.js"></script>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btnguardar').click(function(){
+			var datos = $('#frmajax').serialize();
+
+			$.ajax({
+				type: "POST",
+				url: "registrar_estudiante.php",
+				data: datos,
+				success: function(r){
+					if(r==0){
+						alert("Falló al registrarse");
+					} else{
+						alert("¡Estudiante registrado con exito!");
+					}
+				}
+			});
+
+			return false;
+		});
+	});
+</script>

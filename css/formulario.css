@@ -1,0 +1,178 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: georgia, times, serif;
+	color: #333;
+	font-size: 1.3rem;
+	line-height: 1.4em;
+	background: white;
+	margin: 0;
+}
+
+.fondo {
+	background: url("https://cdn.pixabay.com/photo/2019/10/01/13/58/coffee-4518353_960_720.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.container {
+	max-width: 80%;
+	max-width: 1100px;
+	margin: 0 auto; 
+}
+
+
+.logo-nav-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	
+}
+
+.logo {
+	letter-spacing: 5px;
+	font-size: 1.3em;
+}
+
+.menu-icon{
+	display: none; 
+}
+
+.navegacion ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+}
+
+	.navegacion ul li {
+		display: inline-block;
+	}
+
+		.navegacion ul li a {
+			display: block;
+			padding: 0.5rem 1rem;
+			transition: all 0.2s linear;
+			border-radius: 5px;
+		}
+		
+			.navegacion ul li a:hover {
+				background: #0A24CB;
+			}
+
+@media only screen and (max-width: 767px){
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+	}
+
+	.navegacion{
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.navegacion ul{
+		display: none;
+	}
+
+	.navegacion ul.show{
+		display: block;
+	}
+
+	.navegacion ul li {
+		display: block;
+	}
+
+		.navegacion ul li a {
+			display: block;
+			padding: 0.5rem 0;
+			transition: all 0.2s linear;
+			border-radius: 5px;
+		}
+		
+			.navegacion ul li a:hover {
+				background: #0A24CB;
+			}
+}
+
+
+.main {
+	padding-top: 0rem; 
+}
+
+.form-register{
+	max-width: 400px;
+	background: white;
+	padding: 30px;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 4px;
+	font-family: 'calibri';
+	color: black;
+	box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h3{
+	font-size: 22px;
+	color:#9E744F;
+	margin-bottom: 20px;
+}
+
+.controls{
+	width: 100%;
+	background: white;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 2px solid #9E744F;
+	font-family: 'calibri';
+	font-size: 18px;
+	color: black;
+	
+}
+
+.form-register p{
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	
+}
+
+.form-register a{
+	color:white;
+	text-decoration: none;
+}
+
+.form-register a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.form-register .botons{
+	width: 100%;
+	background: #F1B428;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}
+
+#filtrar{
+	max-width: 400em; 
+	padding: 9px 20px 9px 5px; 
+	margin-top:10px; 
+	margin-bottom: 10px; 
+	box-sizing: border-box; 
+	background-color: lightgray;
+	border-radius: 5px; 
+	border-color: black;
+}
+
